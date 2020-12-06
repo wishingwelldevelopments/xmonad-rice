@@ -1,0 +1,15 @@
+Config { font = "xft:Source Code Pro-8"
+       , lowerOnStart = True
+       , bgColor = "#000000"
+       , fgColor = "#ffffff"
+       , position = Bottom
+       , commands = [
+              Run Date "%a %d/%m/%y %b" "date" 60
+            , Run Date "%H:%M:%S" "time" 60
+		    , Run Com "foob" [] "song" 60
+		    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %StdinReader% }[ %time% - %date% ]{ %song% "
+       }
