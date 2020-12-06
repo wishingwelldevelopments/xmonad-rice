@@ -1,0 +1,3 @@
+#out=$(echo '{ "command": ["get_property", "media-title"] }' | socat - /tmp/mpvsocket | jq -r '.data' | cut -c1-40)
+out=$(head ~/.m)
+echo "$out"
